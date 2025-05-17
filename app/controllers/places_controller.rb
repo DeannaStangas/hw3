@@ -8,7 +8,7 @@ class PlacesController < ApplicationController
   def show
     # find a Place
     @place = Place.find_by({"name"=> params["name"]})
-    @place=Place.where({"place_id"=> @place["id"]})
+    @entries=Entry.where({"place_id"=> @place["id"]})
     p @place
     # render companies/show view with details about Company
   end
