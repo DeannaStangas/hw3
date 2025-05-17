@@ -1,0 +1,21 @@
+<!-- Places Details Page -->
+
+<h1><%= @place["name"]%></h1>
+
+<h2>Journal Entries</h2>
+
+<ul>
+<%for entry in @entries %>
+  <li><%= entry["title"]%> </li>
+  <li><%= entry["date"]%> </li>
+  <li><%= entry["post"]%> </li>
+  <%end%>
+</ul>
+
+<p>
+  <a href="/contacts/new?place=<%= @place["place_id"]%>%">New Post</a>
+</p>
+
+<p>
+  <a href="/places">Back to Places I've Been</a>
+</p>
