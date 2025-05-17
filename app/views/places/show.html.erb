@@ -7,13 +7,13 @@
 <ul>
 <%for entry in @entries %>
   <li><%= entry["title"]%> </li>
-  <li><%= entry["date"]%> </li>
-  <li><%= entry["post"]%> </li>
+  <li><%= entry["occurred_on"]%> </li>
+  <li><%= entry["description"]%> </li>
   <%end%>
 </ul>
 
 <p>
-  <a href="/contacts/new?place=<%= @place["place_id"]%>%">New Post</a>
+  <a href="/entries/new?place=<%= @place["place_id"]%>">New Post</a>
 </p>
 
 <p>
