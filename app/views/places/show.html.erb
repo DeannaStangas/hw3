@@ -4,13 +4,11 @@
 
 <h2>Journal Entries</h2>
 
-<ul>
-<%for entry in @entries %>
-  <li><%= entry["title"]%> </li>
-  <li><%= entry["occurred_on"]%> </li>
-  <li><%= entry["description"]%> </li>
-  <%end%>
-</ul>
+<% for entry in @entries %>
+  <h3 style="margin-bottom: 2px;"><%= entry["title"] %></h3>
+  <p style="margin: 0;"><%= entry["occurred_on"] %></p>
+  <p style="margin-top: 2px;"><%= entry["description"] %></p>
+<% end %>
 
 <p>
   <a href="/entries/new?place=<%= @place["id"]%>">New Post</a>

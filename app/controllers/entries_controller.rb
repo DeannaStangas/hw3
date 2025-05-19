@@ -11,7 +11,7 @@ class EntriesController < ApplicationController
     # start with a new journal entry
     @entry = Entry.new
 
-    # assign user-entered form data to Contact's columns
+    # assign user-entered form data to entry's columns
     @entry["title"] = params["title"]
     @entry["occurred_on"] = params["occurred_on"]
     @entry["description"] = params["description"]
@@ -19,7 +19,7 @@ class EntriesController < ApplicationController
     # assign relationship between journal entry and place
     @entry["place_id"] = params["place_id"]
 
-    # save Contact row
+    # save entry row
     @entry.save
 
     # redirect user
