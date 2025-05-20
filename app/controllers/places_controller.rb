@@ -9,12 +9,11 @@ class PlacesController < ApplicationController
     # find a Place
     @place = Place.find_by({"id"=> params["id"]})
     @entries=Entry.where({"place_id"=> @place["id"]})
-    p @place
     # render places/show view with details about Place
   end
 
   def new
-    # render posts/new view with new Post form
+    render :template => "places/new"
   end
 
   def create

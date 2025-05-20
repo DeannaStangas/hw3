@@ -1,10 +1,8 @@
 class EntriesController < ApplicationController
-  def show
-    # find a Place
-    @place = Place.find_by({"id"=> params["id"]})
-    @entries=Entry.where({"place_id"=> @place["id"]})
-    p @place
-    # render places/show view with details about Place
+
+  def new
+    @place = Place.find_by({ "id" => params["place_id"] })
+    # render entries/new view with new Entry form
   end
 
   def create
